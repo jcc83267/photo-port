@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Nav() {
-    
+
     const [categories] = useState([
         {
             name: 'commercial',
@@ -13,10 +13,10 @@ function Nav() {
         { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
     ]);
     const [currentCategory, setCurrentCategory] = useState(categories[0]);
-    
+
     useEffect(() => {
         document.title = capitalizeFirstLetter(currentCategory.name);
-      }, [currentCategory]);
+    }, [currentCategory]);
 
     return (
         <header className="flex-row px-1">
@@ -32,9 +32,7 @@ function Nav() {
             <nav>
                 <ul className="flex-row">
                     <li className="mx-2">
-                        <a
-                            href="#about"
-                        >
+                        <a data-testid="about" href="#about">
                             About me
             </a>
                     </li>
