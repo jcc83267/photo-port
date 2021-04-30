@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-w
+
 const PhotoList = ({ category }) => {
 
   const [photos] = useState([
